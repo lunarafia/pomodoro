@@ -4,7 +4,7 @@ window.onload = () => {
     const reset = document.getElementById("reset");
     const timer = document.getElementById("timer");
 
-    let timeLeft = 20 * 60;
+    let timeLeft = 20 * 60; // Default to 20 minutes
     let interval;
 
     const updateTimer = () => {
@@ -18,24 +18,37 @@ window.onload = () => {
     };
 
     const startTimer = () => {
+        const userInput = document.getElementById("userInput");
+        const minutes = parseInt(userInput.value);
+
+        if(!isNaN(minutes) && minutes > 0) {
+            timeLeft = minutes * 60;
+            updateTimer();
+
         interval = setInterval(() => {
             timeLeft--;
             updateTimer();
 
             if(timeLeft === 0){
                 clearInterval(interval);
+                document.getElementById("ding-sound").play();
                 alert("Time's up!");
-                timeLeft = 1500;
+                timeLeft = 20 * 60;
                 updateTimer();
             }
-        }, 1000);
+        }, 1000);   
+        
+        } else {
+            alert("Please enter a valid number of minutes.");
+        }
+       
     };
 
     const stopTimer = () => clearInterval(interval);
 
     const resetTimer = () => {
         clearInterval(interval);
-        timeLeft = 1500;
+        timeLeft = 20 * 60;
         updateTimer();
     }
 

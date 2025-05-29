@@ -17,8 +17,20 @@ nav {
     color: white;
     padding: 1em 2em;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
 }
 
+.nav-links{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-links:hover{
+    transform: scale(1.1);
+}
 nav > h2{
     transition: 0.2s ease-in-out;
 }
@@ -79,4 +91,26 @@ button:hover{
 
 #reset{
     color: #423e40;
+}
+
+.timer-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+#userInput{
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 2px solid #DB89A7;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+#userInput:focus{
+    outline: none;
+    border-color: white;
 }

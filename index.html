@@ -10,12 +10,21 @@
 <body>
         <nav>
             <h2>hibiscus.study</h2>
+            <ul class="nav-links">
+                <li><h3>pomodoro</h3></li>
+                <li><h3>to-do list</h3></li>
+            </ul>
         </nav>
   
     <div class="container">
         <h1 class="title">Pomodoro Timer</h1>
         <hr>
         <p class="timer" id="timer">20:00</p>
+
+        <div class="timer-controls">
+            <input type="number" id="userInput" placeholder="Enter time in minutes">
+        
+        </div>
         
         <div class="button-wrapper">
             <button id="start">Start</button>
@@ -24,6 +33,7 @@
         </div>
     </div>
 
+    <audio id="ding-sound" src="ding-sound-pomo.mp3" preload="auto"></audio>
     <script src="app.js"></script>
 </body>
 </html>
