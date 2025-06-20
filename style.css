@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rockwell";
-    background-color: #DB89A7;
+    font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif; 
 }
 
 body{
     min-height: 100vh;
-    background-color: #FFE6EF;
+    /* background-color: #FFE6EF; */
+    background: #FFE6EF;
+background: linear-gradient(90deg, rgba(255, 230, 239, 1) 0%, rgba(255, 125, 175, 1) 50%, rgba(255, 230, 239, 1) 100%);
 }
 
 nav {
@@ -32,11 +33,19 @@ a:visited{
     list-style: none;
     text-decoration: none;
     transition: 0.2s ease-in-out;
+    color: inherit;
+    text-decoration: none;
 }
 
 .nav-links:hover{
     transform: scale(1.1);
 }
+
+.nav-links:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
 nav > h2{
     transition: 0.2s ease-in-out;
 }
@@ -56,6 +65,8 @@ nav > h2:hover{
     margin: 4em auto;
     margin-top: 4em; 
     max-width: 700px;
+    margin-bottom: 4em;
+    background-color: #DB89A7;
 }
 
 .container-2{
