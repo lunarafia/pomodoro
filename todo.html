@@ -15,19 +15,40 @@
             </ul>
         </nav>
 
-    <div class="container-2">
-        <div class="todo-app">
-            <h2>To-Do List</h2>
-            <div class="todo-input">
-                <input type="text" id="input-text" placeholder="Add a new task...">
-                <button id="add-button">Add</button>
+    <div id="todo-container">
+        <!-- to do list header-->
+         <!-- <div id="todo-header">
+            <h1>To Do List</h1>
+         </div>
+         -->
+         <!-- input box -->
+          <div id="todo-form">
+            <input
+                type="text"
+                class="input-item"
+                name="input-box"
+                id="input-box"
+                placeholder="Add Task"
+            />
+
+            <!-- button -->
+             <button id="input-button" onclick="addTask()">Add</button>
+          </div>
+
+          <!-- task list -->
+           <h2>Task List</h2>
+           <ul id="list-container"></ul>
+          
+           <hr />
+           <!-- task list counter-->
+            <div class="counter-container">
+                <div id="task-counters">
+                    Completed: <span id="completed-counter">0</span> | Uncompleted:
+                    <span id="uncompleted-counter">0</span>
+                </div>
             </div>
-            <ul id="list-container">
-                <li>Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
-            </ul>
-           
+
+        </div>
 
     <script src="app.js"></script>
 </body>

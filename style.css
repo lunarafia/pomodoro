@@ -196,3 +196,118 @@ ul li::before{
     top: 12px;
     left: 8px;
 }
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    border: 1px solid gray;
+}
+
+/* ===== TODO PAGE CONTAINER ===== */
+#todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    max-width: 700px;
+    margin: 4em auto;
+    padding: 3em 2em;
+    background-color: #DB89A7;
+    border-radius: 2em;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== INPUT AREA ===== */
+#todo-form {
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-box {
+    flex: 1;
+    padding: 0.8em 1em;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background-color: #FFE6EF;
+    color: #423e40;
+}
+
+#input-button {
+    padding: 0.8em 1.2em;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    background-color: #FFE6EF;
+    color: #DB89A7;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+#input-button:hover {
+    transform: scale(1.1);
+}
+
+#task-title {
+    margin-top: 1em;
+    font-size: 2em;
+}
+
+#list-container {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+#list-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFE6EF;
+    color: #423e40;
+    padding: 0.8em 1em;
+    border-radius: 1em;
+    margin-bottom: 0.8em;
+    position: relative;
+}
+
+#list-container li label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.edit-btn,
+.delete-btn {
+    margin-left: 0.5em;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: 0.2s ease-in-out;
+    font-weight: bold;
+    color: #DB89A7;
+}
+
+.edit-btn:hover {
+    color: #386A44;
+    transform: scale(1.1);
+}
+
+.delete-btn:hover {
+    color: #9E364C;
+    transform: scale(1.1);
+}
+
+.counter-container {
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+input[type="checkbox"] {
+    accent-color: #DB89A7;
+}
